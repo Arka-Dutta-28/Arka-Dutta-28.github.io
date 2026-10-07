@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arka Dutta</title>
+<meta name="description" content="Arka Dutta, M.Tech student in Artificial Intelligence at IIT Gandhinagar. Computer vision for surgical video, and machine learning systems.">
+<meta property="og:title" content="Arka Dutta">
+<meta property="og:description" content="M.Tech student in Artificial Intelligence at IIT Gandhinagar. Computer vision for surgical video, and machine learning systems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arka-dutta-28.github.io/">
+<meta property="og:image" content="https://arka-dutta-28.github.io/photo.jpg">
+<link rel="canonical" href="https://arka-dutta-28.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E6F6A'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/source-sans-3.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+:root {
+  --ink: #1C1F23;
+  --muted: #5E6672;
+  --rule: #E2E5EA;
+  --accent: #0E6F6A;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: #FFFFFF;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(14, 111, 106, 0.4);
+}
+a:hover { text-decoration-color: currentColor; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+p { margin: 0; }
+
+.skip { position: absolute; left: -999rem; }
+.skip:focus { left: 1rem; top: 1rem; padding: 0.4rem 0.7rem; background: #FFFFFF; }
+
+.shell {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2.75rem 1.5rem 3rem;
+}
+
+/* Sidebar: section links, held in place while the page scrolls */
+.side {
+  position: sticky;
+  top: 2.75rem;
+  align-self: start;
+  display: grid;
+  gap: 1.05rem;
+  padding-top: 0.75rem;
+  font-size: 0.97rem;
+}
+.side a { color: var(--ink); text-decoration: none; }
+.side a:hover { color: var(--accent); }
+
+main { min-width: 0; padding-left: 2.25rem; border-left: 2px solid var(--accent); }
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 13rem;
+  gap: 2.5rem;
+  align-items: start;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 3.7rem);
+  line-height: 1;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+.role { margin-top: 0.9rem; font-size: 1.17rem; line-height: 1.35; }
+.bio { max-width: 38rem; margin-top: 1.15rem; }
+.bio p + p { margin-top: 0.85em; }
+.photo { display: block; width: 13rem; height: auto; aspect-ratio: 1; border-radius: 6px; }
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.7rem;
+  margin: 1.7rem 0 0;
+  padding: 0.85rem 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.97rem;
+}
+.contact a { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--ink); text-decoration: none; }
+.contact a:hover { color: var(--accent); }
+.contact svg { width: 1.05rem; height: 1.05rem; }
+
+h2 {
+  margin: 0 0 0.95rem;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 0 2.5rem;
+  margin-top: 2.25rem;
+}
+.band section + section { padding-left: 2.5rem; border-left: 1px solid var(--rule); }
+
+.updates { display: grid; gap: 0.6rem; margin: 0; padding: 0; list-style: none; line-height: 1.45; }
+.updates li { display: grid; grid-template-columns: 4.7rem minmax(0, 1fr); gap: 0.9rem; }
+.updates .when { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.interests { display: grid; gap: 0.85rem; margin: 0; padding: 0; list-style: none; }
+.interests b { display: block; font-weight: 650; }
+.interests span { display: block; color: var(--muted); font-size: 0.97rem; line-height: 1.45; }
+
+#work { margin-top: 2.5rem; padding-top: 2.25rem; border-top: 1px solid var(--rule); }
+.work {
+  display: grid;
+  grid-template-columns: 22rem minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+h2 + .work { padding-top: 0.5rem; border-top: 0; }
+.work figure { margin: 0; }
+.work figure svg { display: block; width: 100%; height: auto; }
+.work h3 { margin: 0; font-size: 1.22rem; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
+.work h3 a { color: var(--ink); text-decoration-color: rgba(28, 31, 35, 0.25); }
+.work h3 a:hover { color: var(--accent); }
+.work .by { margin-top: 0.25rem; color: var(--muted); font-size: 0.97rem; line-height: 1.4; }
+.work .desc { margin-top: 0.55rem; }
+.work .more { display: flex; flex-wrap: wrap; gap: 0.2rem 1.1rem; margin-top: 0.55rem; font-size: 0.97rem; }
+
+footer {
+  margin-top: 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 62rem) {
+  .top { grid-template-columns: minmax(0, 1fr) 10.5rem; gap: 1.75rem; }
+  .photo { width: 10.5rem; }
+  .work { grid-template-columns: 19rem minmax(0, 1fr); gap: 1.5rem; }
+}
+@media (max-width: 50rem) {
+  .shell { grid-template-columns: 1fr; padding: 1.1rem 1rem 2.5rem; }
+  .side {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.15rem;
+    margin-bottom: 1.6rem;
+    padding: 0 0 0.75rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  main { padding-left: 0; border-left: 0; }
+  .top { grid-template-columns: 1fr; gap: 1.25rem; }
+  .photo { order: -1; width: 8.5rem; }
+  .band { grid-template-columns: 1fr; gap: 2rem; }
+  .band section + section { padding-left: 0; border-left: 0; }
+  .work { grid-template-columns: 1fr; gap: 0.9rem; }
+  .work figure { max-width: 23rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+
+  <nav class="side" aria-label="Sections">
+    <a href="#top">About</a>
+    <a href="#updates">Updates</a>
+    <a href="#interests">Interests</a>
+    <a href="#work">Projects</a>
+  </nav>
+
+  <main id="main">
+
+    <header class="top" id="top">
+      <div>
+        <h1>Arka Dutta</h1>
+        <p class="role">M.Tech student in Artificial Intelligence &middot; IIT Gandhinagar</p>
+        <div class="bio">
+          <p>I am an M.Tech student in Artificial Intelligence at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, advised by <a href="https://shanmuga.people.iitgn.ac.in">Prof. Shanmuganathan Raman</a> at the Computer Vision, Imaging and Graphics (CVIG) Lab. My thesis is on computer vision for surgical video, and is part of a DST-funded collaboration with <a href="https://www.ntu.edu.sg">NTU Singapore</a>.</p>
+          <p>Outside the thesis I build machine learning systems and put them online. I am also a teaching assistant for the Digital Systems course.</p>
+          <p>Before this I studied Mathematics and Computing at <a href="https://www.iitp.ac.in">IIT Patna</a>. My all-India ranks were 949 in GATE Data Science and AI 2025 and 6,120 in JEE Advanced 2021.</p>
+        </div>
+      </div>
+      <img class="photo" src="photo.jpg" alt="Portrait of Arka Dutta" width="400" height="400">
+    </header>
+
+    <ul class="contact">
+      <li><a href="mailto:arka.dutta@iitgn.ac.in"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="m2.6 4.6 5.4 4 5.4-4"/></svg>Email</a></li>
+      <li><a href="https://github.com/Arka-Dutta-28"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5.5 4.5-3.5 3.5 3.5 3.5M10.5 4.5l3.5 3.5-3.5 3.5"/></svg>GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/arkadutta28"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 7.2V11M5 5v.01M7.6 11V7.2M7.6 9c0-1.2.8-1.9 1.8-1.9s1.6.7 1.6 1.9v2"/></svg>LinkedIn</a></li>
+    </ul>
+
+    <div class="band">
+      <section id="updates" aria-labelledby="h-updates">
+        <h2 id="h-updates">Recent updates</h2>
+        <ul class="updates">
+          <li><span class="when">Sep 2026</span><span>Finished a real-time vehicle recognition platform for the Gujarat Police Hackathon 2026.</span></li>
+          <li><span class="when">Aug 2026</span><span>Started as a teaching assistant for the Digital Systems course at IIT Gandhinagar.</span></li>
+          <li><span class="when">Aug 2026</span><span>Built DarkLine, a digital twin of a vehicle assembly line, for the Accenture Innovation Challenge 2026.</span></li>
+          <li><span class="when">Jul 2026</span><span>Began my M.Tech thesis on surgical video with Prof. Shanmuganathan Raman.</span></li>
+          <li><span class="when">Jun 2026</span><span>Attended the 3D Vision Summer School 2026 at BITS Pilani, Goa.</span></li>
+          <li><span class="when">Dec 2025</span><span>Helped organise the Bharat Innovates Showcase at IIT Gandhinagar.</span></li>
+        </ul>
+      </section>
+      <section id="interests" aria-labelledby="h-interests">
+        <h2 id="h-interests">Research interests</h2>
+        <ul class="interests">
+          <li><b>Procedure planning</b><span>Predicting the steps of an operation from video.</span></li>
+          <li><b>Depth from surgical video</b><span>Self-supervised monocular depth estimation in endoscopy, and adapting vision foundation models with LoRA.</span></li>
+          <li><b>Vision systems that run</b><span>Detection, tracking and OCR over live camera streams, and retrieval-augmented assistants.</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <section id="work" aria-labelledby="h-work">
+      <h2 id="h-work">Research and projects</h2>
+      <article class="work">
+        <figure><svg viewBox="0 0 320 204" role="img" aria-label="Top: given a start image and a goal image, a planner predicts four step labels that lead from the start to the goal. Bottom: an endoscope frame passes through a frozen ViT encoder with trained LoRA adapters and a decoder to give a depth map." font-family="'Source Sans 3', system-ui, sans-serif" font-size="10.5" stroke-linecap="round" stroke-linejoin="round"><defs><marker id="m1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1F2430"/></marker><marker id="m1t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1A7A77"/></marker><marker id="m1r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#B8405A"/></marker><clipPath id="c1a"><circle cx="40" cy="54" r="28"/></clipPath><clipPath id="c1b"><circle cx="280" cy="54" r="28"/></clipPath><radialGradient id="g1"><stop offset="0" stop-color="#440154"/><stop offset=".55" stop-color="#3B528B"/><stop offset="1" stop-color="#21918C"/></radialGradient></defs><g transform="translate(0,-114)"><text x="8" y="127" font-weight="700" fill="#1F2430">Planning the steps to a goal</text><rect x="8" y="136" width="28" height="28" rx="4" fill="#1B1418"/><circle cx="22" cy="150" r="11" fill="#DE9A93"/><ellipse cx="21" cy="151" rx="6" ry="4.2" fill="#C8625E"/><rect x="8" y="170" width="28" height="28" rx="4" fill="#1B1418"/><circle cx="22" cy="184" r="11" fill="#DE9A93"/><ellipse cx="21" cy="185" rx="6.5" ry="4.2" fill="#EDB9AE"/><path d="M16.5 185H25.5M19 183V187M21 183V187M23 183V187" fill="none" stroke="#fff" stroke-width="0.9"/><text x="41" y="153.5" font-size="9.5" fill="#5B6472">start image</text><text x="41" y="187.5" font-size="9.5" fill="#5B6472">goal image</text><path d="M93 151 103 160" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m1)"/><path d="M90 183 103 174" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m1)"/><rect x="106" y="153" width="56" height="28" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="134.0" y="170.6" text-anchor="middle" font-weight="600" fill="#1F2430">planner</text><path d="M162 167H173" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m1)"/><path d="M196 167H206" fill="none" stroke="#1A7A77" stroke-width="1.2"/><path d="M226 167H236" fill="none" stroke="#1A7A77" stroke-width="1.2"/><path d="M256 167H266" fill="none" stroke="#1A7A77" stroke-width="1.2"/><circle cx="186" cy="167" r="10" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1.2"/><text x="186" y="170.7" text-anchor="middle" font-weight="600" fill="#1A7A77">1</text><circle cx="216" cy="167" r="10" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1.2"/><text x="216" y="170.7" text-anchor="middle" font-weight="600" fill="#1A7A77">2</text><circle cx="246" cy="167" r="10" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1.2"/><text x="246" y="170.7" text-anchor="middle" font-weight="600" fill="#1A7A77">3</text><circle cx="276" cy="167" r="10" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1.2"/><text x="276" y="170.7" text-anchor="middle" font-weight="600" fill="#1A7A77">4</text><text x="231" y="192" text-anchor="middle" font-size="9.5" fill="#5B6472">4 step labels, start to goal</text></g><path d="M8 94H312" fill="none" stroke="#D5DAE1" stroke-width="1"/><g transform="translate(0,96)"><text x="8" y="13" font-weight="700" fill="#1F2430">Depth from one camera</text><rect x="8" y="22" width="64" height="64" rx="6" fill="#1B1418"/><g clip-path="url(#c1a)"><circle cx="40" cy="54" r="28" fill="#DE9A93"/><path d="M18 60C22 44 36 38 46 44C58 51 62 63 52 72C40 81 22 76 18 60Z" fill="#C8625E"/><ellipse cx="29" cy="40" rx="10" ry="6" fill="#EDB9AE"/><ellipse cx="44" cy="58" rx="6" ry="3.5" fill="#E9A39B"/><path d="M72 84 48 60 52 56 76 80Z" fill="#C3CAD3" stroke="#6B7480" stroke-width=".8"/></g><rect x="248" y="22" width="64" height="64" rx="6" fill="#1B1418"/><g clip-path="url(#c1b)"><circle cx="280" cy="54" r="28" fill="url(#g1)"/><path d="M258 60C262 44 276 38 286 44C298 51 302 63 292 72C280 81 262 76 258 60Z" fill="#35B779"/><ellipse cx="269" cy="40" rx="10" ry="6" fill="#2A9D8F"/><ellipse cx="284" cy="58" rx="6" ry="3.5" fill="#90D743"/><path d="M312 84 288 60 292 56 316 80Z" fill="#FDE725"/></g><text x="40" y="99" text-anchor="middle" font-size="9.5" fill="#5B6472">frame</text><text x="280" y="99" text-anchor="middle" font-size="9.5" fill="#5B6472">depth map</text><path d="M72 54H85" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m1)"/><rect x="88" y="34" width="78" height="40" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="127.0" y="52.5" text-anchor="middle" font-weight="600" fill="#1F2430">ViT encoder</text><text x="127.0" y="63.5" text-anchor="middle" font-size="9.5" fill="#5B6472">frozen</text><path d="M106 74V79" fill="none" stroke="#1A7A77" stroke-width="1"/><rect x="97" y="79" width="18" height="9" rx="3" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1"/><path d="M128 74V79" fill="none" stroke="#1A7A77" stroke-width="1"/><rect x="119" y="79" width="18" height="9" rx="3" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1"/><path d="M150 74V79" fill="none" stroke="#1A7A77" stroke-width="1"/><rect x="141" y="79" width="18" height="9" rx="3" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1"/><text x="127" y="101" text-anchor="middle" font-size="9.5" fill="#1A7A77">LoRA adapters, trained</text><path d="M166 54H179" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m1)"/><rect x="182" y="40" width="52" height="28" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="208.0" y="57.6" text-anchor="middle" fill="#1F2430">decoder</text><path d="M234 54H245" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m1)"/></g></svg></figure>
+        <div>
+          <h3>Task-driven surgical intelligence</h3>
+          <p class="by">M.Tech thesis &middot; advised by Prof. Shanmuganathan Raman &middot; with NTU Singapore &middot; 2026 to present</p>
+          <p class="desc">Planning the steps of a surgical procedure from video, and estimating depth from a single endoscope camera. The work is ongoing.</p>
+        </div>
+      </article>
+      <article class="work">
+        <figure><svg viewBox="0 0 320 196" role="img" aria-label="Top: a car is detected in a camera frame, its plate is cropped and read as text, checked against a watchlist, and a match raises an alert. Bottom: sightings of the same plate at different cameras are joined into a route on a map." font-family="'Source Sans 3', system-ui, sans-serif" font-size="10.5" stroke-linecap="round" stroke-linejoin="round"><defs><marker id="m2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1F2430"/></marker><marker id="m2t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1A7A77"/></marker><marker id="m2r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#B8405A"/></marker><clipPath id="c2"><rect x="8" y="22" width="112" height="72" rx="6"/></clipPath></defs><text x="8" y="13" font-weight="700" fill="#1F2430">Read every plate</text><g clip-path="url(#c2)"><rect x="8" y="22" width="112" height="72" fill="#DDE7F3"/><rect x="8" y="58" width="112" height="36" fill="#AEB5C0"/><path d="M30 64V94M98 64V94" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="5 5" opacity=".85"/><rect x="44" y="50" width="40" height="27" rx="6" fill="#34425A"/><rect x="49" y="53" width="30" height="9" rx="3" fill="#93A8C4"/><rect x="46" y="66" width="7" height="4" rx="1" fill="#E25B5B"/><rect x="75" y="66" width="7" height="4" rx="1" fill="#E25B5B"/><rect x="57" y="67" width="14" height="6" rx="1" fill="#fff"/><rect x="47" y="75" width="8" height="6" rx="2" fill="#1B1F27"/><rect x="73" y="75" width="8" height="6" rx="2" fill="#1B1F27"/></g><rect x="8" y="22" width="112" height="72" rx="6" fill="none" stroke="#C5CBD5"/><rect x="39" y="46" width="50" height="38" rx="2" fill="none" stroke="#1A7A77" stroke-width="1.4"/><rect x="39" y="36" width="24" height="10" rx="2" fill="#1A7A77"/><text x="51" y="43.6" text-anchor="middle" font-size="8.5" font-weight="600" fill="#fff">car</text><rect x="54.5" y="64.5" width="19" height="11" rx="1.5" fill="none" stroke="#B7791F" stroke-width="1.3"/><path d="M73.5 64.5 138 30M73.5 75.5 138 60" fill="none" stroke="#B7791F" stroke-width="0.8" stroke-dasharray="2 2.5"/><rect x="138" y="30" width="92" height="30" rx="4" fill="#fff" stroke="#1F2430" stroke-width="1.4"/><text x="184" y="49.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1F2430" letter-spacing=".4">GJ 00 AB 1234</text><text x="184" y="73" text-anchor="middle" font-size="9.5" fill="#5B6472">plate crop, read as text</text><path d="M230 45H245" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m2)"/><rect x="248" y="28" width="64" height="34" rx="5" fill="#FDF0D3" stroke="#B7791F" stroke-width="1.2"/><text x="280.0" y="48.6" text-anchor="middle" font-weight="600" fill="#1F2430">watchlist</text><path d="M280 62V75" fill="none" stroke="#B8405A" stroke-width="1.2" marker-end="url(#m2r)"/><text x="275" y="72" text-anchor="end" font-size="9.5" fill="#B8405A">match</text><rect x="248" y="78" width="64" height="20" rx="10" fill="#FBE3E6" stroke="#B8405A" stroke-width="1.2"/><text x="280" y="91.6" text-anchor="middle" font-weight="700" fill="#B8405A">alert</text><path d="M8 110H312" fill="none" stroke="#D5DAE1" stroke-width="1"/><text x="8" y="125" font-weight="700" fill="#1F2430">Trace the route across cameras</text><rect x="8" y="134" width="304" height="54" rx="6" fill="#F5F7FA" stroke="#E1E5EB"/><path d="M30 174 72 152 112 176 150 150 190 174 230 152 268 172 298 148M72 152 112 146 150 150M190 174 232 180 268 172" fill="none" stroke="#C5CBD5" stroke-width="1.3"/><path d="M30 174 72 152 112 146 150 150 190 174 225 154.5" fill="none" stroke="#1A7A77" stroke-width="2" marker-end="url(#m2t)"/><circle cx="30" cy="174" r="3.8" fill="#1A7A77" stroke="#fff" stroke-width="1"/><circle cx="72" cy="152" r="3.8" fill="#1A7A77" stroke="#fff" stroke-width="1"/><circle cx="112" cy="176" r="3.2" fill="#fff" stroke="#8A93A3" stroke-width="1.1"/><circle cx="150" cy="150" r="3.8" fill="#1A7A77" stroke="#fff" stroke-width="1"/><circle cx="190" cy="174" r="3.8" fill="#1A7A77" stroke="#fff" stroke-width="1"/><circle cx="230" cy="152" r="3.8" fill="#1A7A77" stroke="#fff" stroke-width="1"/><circle cx="268" cy="172" r="3.2" fill="#fff" stroke="#8A93A3" stroke-width="1.1"/><circle cx="298" cy="148" r="3.2" fill="#fff" stroke="#8A93A3" stroke-width="1.1"/><circle cx="112" cy="146" r="3.8" fill="#1A7A77" stroke="#fff" stroke-width="1"/><circle cx="232" cy="180" r="3.2" fill="#fff" stroke="#8A93A3" stroke-width="1.1"/><text x="30" y="166" text-anchor="middle" font-size="9" fill="#5B6472">10:02</text><text x="150" y="143" text-anchor="middle" font-size="9" fill="#5B6472">10:11</text><text x="238" y="147" font-size="9" fill="#5B6472">10:19</text></svg></figure>
+        <div>
+          <h3><a href="https://github.com/Arka-Dutta-28/gujarat-cctv-integration-platform">Real-time vehicle recognition</a></h3>
+          <p class="by">Gujarat Police Hackathon 2026 &middot; solo</p>
+          <p class="desc">A platform that registers a state&rsquo;s CCTV cameras, reads number plates continuously, traces a vehicle&rsquo;s route across cameras and raises an alert on a watchlist match. It runs over 80 camera streams.</p>
+          <p class="more"><a href="https://github.com/Arka-Dutta-28/gujarat-cctv-integration-platform">Code</a></p>
+        </div>
+      </article>
+      <article class="work">
+        <figure><svg viewBox="0 0 320 192" role="img" aria-label="Top: a line of stations where one has no sensor; the measured cycle times of its neighbours give an estimate with a range for it. Bottom: the line is then simulated forward to forecast the next 30 minutes as a widening band." font-family="'Source Sans 3', system-ui, sans-serif" font-size="10.5" stroke-linecap="round" stroke-linejoin="round"><defs><marker id="m3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1F2430"/></marker><marker id="m3t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1A7A77"/></marker><marker id="m3r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#B8405A"/></marker></defs><text x="8" y="13" font-weight="700" fill="#1F2430">Infer the station nobody measures</text><path d="M8 44H309" fill="none" stroke="#1F2430" stroke-width="1.6" marker-end="url(#m3)"/><path d="M8 106H312" fill="none" stroke="#D5DAE1" stroke-width="1"/><rect x="17" y="31" width="26" height="26" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><circle cx="37" cy="37" r="2.2" fill="#2FA36B"/><rect x="24" y="80" width="12" height="26" rx="2" fill="#FDF0D3" stroke="#B7791F" stroke-width="1"/><rect x="59" y="31" width="26" height="26" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><circle cx="79" cy="37" r="2.2" fill="#2FA36B"/><rect x="66" y="74" width="12" height="32" rx="2" fill="#FDF0D3" stroke="#B7791F" stroke-width="1"/><rect x="101" y="31" width="26" height="26" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><circle cx="121" cy="37" r="2.2" fill="#2FA36B"/><rect x="108" y="82" width="12" height="24" rx="2" fill="#FDF0D3" stroke="#B7791F" stroke-width="1"/><rect x="143" y="31" width="26" height="26" rx="4" fill="#1F2430"/><text x="156" y="49" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">?</text><rect x="185" y="31" width="26" height="26" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><circle cx="205" cy="37" r="2.2" fill="#2FA36B"/><rect x="192" y="76" width="12" height="30" rx="2" fill="#FDF0D3" stroke="#B7791F" stroke-width="1"/><rect x="227" y="31" width="26" height="26" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><circle cx="247" cy="37" r="2.2" fill="#2FA36B"/><rect x="234" y="84" width="12" height="22" rx="2" fill="#FDF0D3" stroke="#B7791F" stroke-width="1"/><rect x="269" y="31" width="26" height="26" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><circle cx="289" cy="37" r="2.2" fill="#2FA36B"/><rect x="276" y="79" width="12" height="27" rx="2" fill="#FDF0D3" stroke="#B7791F" stroke-width="1"/><path d="M130 106C143 106 146 68 156 68C166 68 169 106 182 106Z" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1.3"/><path d="M156 68V106" fill="none" stroke="#1A7A77" stroke-width="1" stroke-dasharray="2 2"/><path d="M141 113H171M141 109.5V116.5M171 109.5V116.5" fill="none" stroke="#1A7A77" stroke-width="1.6"/><circle cx="156" cy="113" r="3" fill="#1A7A77"/><path d="M123 90H137" fill="none" stroke="#1F2430" stroke-width="1.1" marker-end="url(#m3)"/><path d="M189 90H175" fill="none" stroke="#1F2430" stroke-width="1.1" marker-end="url(#m3)"/><text x="72" y="120" text-anchor="middle" font-size="9.5" fill="#5B6472">measured cycle times</text><text x="179" y="116.5" font-size="9.5" fill="#1A7A77">estimate, with a range</text><path d="M8 134H312" fill="none" stroke="#D5DAE1" stroke-width="1"/><text x="8" y="149" font-weight="700" fill="#1F2430">Then run the line forward</text><path d="M8 186H312" fill="none" stroke="#D5DAE1" stroke-width="1"/><path d="M150 159V186" fill="none" stroke="#8A93A3" stroke-width="1" stroke-dasharray="2 3"/><text x="150" y="156.5" text-anchor="middle" font-size="9" fill="#5B6472">now</text><path d="M10 174 30 170 50 176 70 168 90 172 110 166 130 171 150 167" fill="none" stroke="#1F2430" stroke-width="1.4"/><path d="M150 167 190 162 230 158 270 155 310 153V183L270 180 230 177 190 173Z" fill="#DCF2EE"/><path d="M150 167 190 168 230 167 270 168 310 168" fill="none" stroke="#1A7A77" stroke-width="1.4" stroke-dasharray="4 3"/><text x="238" y="149" text-anchor="middle" font-size="9.5" fill="#1A7A77">forecast, next 30 minutes</text></svg></figure>
+        <div>
+          <h3><a href="https://arka-dutta-28.github.io/darkline-r2/demo/">DarkLine: a digital twin of a vehicle assembly line</a></h3>
+          <p class="by">Accenture Innovation Challenge 2026</p>
+          <p class="desc">Estimates what a factory station with no sensor is doing from the timing of the stations around it, and gives a range with each estimate.</p>
+          <p class="more"><a href="https://arka-dutta-28.github.io/darkline-r2/demo/">Live dashboard</a><a href="https://github.com/Arka-Dutta-28/darkline-r2">Code</a></p>
+        </div>
+      </article>
+      <article class="work">
+        <figure><svg viewBox="0 0 320 188" role="img" aria-label="Top: a question goes through plan, retrieve and respond steps; retrieve pulls passages from an index, and the answer comes back with sources. Bottom: the website and documents are parsed and embedded into that index, and an admin panel lets staff add or delete documents and re-index." font-family="'Source Sans 3', system-ui, sans-serif" font-size="10.5" stroke-linecap="round" stroke-linejoin="round"><defs><marker id="m4" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1F2430"/></marker><marker id="m4t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1A7A77"/></marker><marker id="m4r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#B8405A"/></marker></defs><text x="8" y="13" font-weight="700" fill="#1F2430">Answers come from the Research Park&rsquo;s own text</text><rect x="8" y="24" width="54" height="28" rx="14" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><text x="35.0" y="41.6" text-anchor="middle" fill="#1F2430">question</text><path d="M62 38H71" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><rect x="74" y="24" width="36" height="28" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="92.0" y="41.6" text-anchor="middle" fill="#1F2430">plan</text><path d="M110 38H119" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><rect x="122" y="24" width="52" height="28" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="148.0" y="41.6" text-anchor="middle" font-weight="600" fill="#1F2430">retrieve</text><path d="M174 38H183" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><rect x="186" y="24" width="52" height="28" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="212.0" y="41.6" text-anchor="middle" fill="#1F2430">respond</text><path d="M238 38H247" fill="none" stroke="#1A7A77" stroke-width="1.2" marker-end="url(#m4t)"/><rect x="250" y="20" width="62" height="36" rx="14" fill="#DCF2EE" stroke="#1A7A77" stroke-width="1.2"/><text x="281" y="36" text-anchor="middle" font-weight="700" fill="#1A7A77">answer</text><text x="281" y="48" text-anchor="middle" font-size="9.5" fill="#1A7A77">with sources</text><path d="M120 80v24a28 5.5 0 0 0 56 0v-24" fill="#FDF0D3" stroke="#B7791F" stroke-width="1.2"/><ellipse cx="148" cy="80" rx="28" ry="5.5" fill="#FDF0D3" stroke="#B7791F" stroke-width="1.2"/><text x="148" y="100" text-anchor="middle" font-weight="600" fill="#1F2430">index</text><path d="M148 73V55" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><text x="154" y="67" font-size="9.5" fill="#5B6472">passages</text><text x="8" y="126" font-weight="700" fill="#1F2430">Staff keep it current</text><rect x="8" y="136" width="58" height="20" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><text x="37.0" y="149.6" text-anchor="middle" fill="#1F2430">website</text><rect x="8" y="162" width="58" height="20" rx="4" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><text x="37.0" y="175.6" text-anchor="middle" fill="#1F2430">documents</text><path d="M66 146 77 152" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><path d="M66 172 77 162" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><rect x="80" y="144" width="36" height="26" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="98.0" y="160.6" text-anchor="middle" fill="#1F2430">parse</text><path d="M116 157H123" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><rect x="126" y="144" width="44" height="26" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="148.0" y="160.6" text-anchor="middle" fill="#1F2430">embed</text><path d="M148 144V113" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><rect x="222" y="142" width="90" height="30" rx="5" fill="#fff" stroke="#1F2430" stroke-width="1.2"/><text x="267" y="155" text-anchor="middle" font-weight="600" fill="#1F2430">admin panel</text><text x="267" y="166" text-anchor="middle" font-size="9.5" fill="#5B6472">add, delete</text><path d="M222 157H173" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m4)"/><text x="197" y="152" text-anchor="middle" font-size="9.5" fill="#5B6472">re-index</text></svg></figure>
+        <div>
+          <h3><a href="https://chatbot-wheat-eight-58.vercel.app">Research Park assistant</a></h3>
+          <p class="by">Proof of concept for the IIT Gandhinagar Research Park</p>
+          <p class="desc">A question-answering assistant grounded in the Research Park&rsquo;s website and documents, with an admin panel for adding and removing documents.</p>
+          <p class="more"><a href="https://chatbot-wheat-eight-58.vercel.app">Live demo</a></p>
+        </div>
+      </article>
+      <article class="work">
+        <figure><svg viewBox="0 0 320 124" role="img" aria-label="The same Hindi sentence in native script and in romanised spelling goes into one Transformer encoder of self-attention and feed-forward blocks, which scores 22 languages and picks Hindi." font-family="'Source Sans 3', system-ui, sans-serif" font-size="10.5" stroke-linecap="round" stroke-linejoin="round"><defs><marker id="m5" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1F2430"/></marker><marker id="m5t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#1A7A77"/></marker><marker id="m5r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0 8 4 0 8z" fill="#B8405A"/></marker></defs><text x="8" y="13" font-weight="700" fill="#1F2430">One model for both spellings</text><rect x="8" y="26" width="88" height="26" rx="5" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><text x="52" y="44" text-anchor="middle" font-size="12.5" fill="#1F2430" font-family="'Noto Sans Devanagari', 'Nirmala UI', 'Kohinoor Devanagari', sans-serif" lang="hi">आप कैसे हैं</text><text x="52" y="63" text-anchor="middle" font-size="9.5" fill="#5B6472">native script</text><rect x="8" y="72" width="88" height="26" rx="5" fill="#F1F3F6" stroke="#8A93A3" stroke-width="1.2"/><text x="52.0" y="88.6" text-anchor="middle" fill="#1F2430">aap kaise hain</text><text x="52" y="109" text-anchor="middle" font-size="9.5" fill="#5B6472">romanised</text><rect x="118" y="24" width="96" height="78" rx="7" fill="#F4F8FE" stroke="#2F6DB5" stroke-width="1.2"/><rect x="126" y="32" width="80" height="24" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="166.0" y="47.6" text-anchor="middle" fill="#1F2430">self-attention</text><path d="M166 56V64" fill="none" stroke="#2F6DB5" stroke-width="1.2"/><rect x="126" y="64" width="80" height="24" rx="5" fill="#E3EEFB" stroke="#2F6DB5" stroke-width="1.2"/><text x="166.0" y="79.6" text-anchor="middle" fill="#1F2430">feed-forward</text><text x="206" y="97.5" text-anchor="end" font-size="9.5" fill="#5B6472">&times; N</text><text x="166" y="115" text-anchor="middle" font-size="9.5" fill="#5B6472">Transformer encoder</text><path d="M96 39 115 52" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m5)"/><path d="M96 85 115 74" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m5)"/><path d="M214 63H229" fill="none" stroke="#1F2430" stroke-width="1.2" marker-end="url(#m5)"/><rect x="234.0" y="96" width="2.3" height="4" rx=".8" fill="#C5CBD5"/><rect x="237.55" y="94" width="2.3" height="6" rx=".8" fill="#C5CBD5"/><rect x="241.1" y="97" width="2.3" height="3" rx=".8" fill="#C5CBD5"/><rect x="244.65" y="92" width="2.3" height="8" rx=".8" fill="#C5CBD5"/><rect x="248.2" y="95" width="2.3" height="5" rx=".8" fill="#C5CBD5"/><rect x="251.75" y="96" width="2.3" height="4" rx=".8" fill="#C5CBD5"/><rect x="255.3" y="93" width="2.3" height="7" rx=".8" fill="#C5CBD5"/><rect x="258.85" y="97" width="2.3" height="3" rx=".8" fill="#C5CBD5"/><rect x="262.4" y="95" width="2.3" height="5" rx=".8" fill="#C5CBD5"/><rect x="265.95" y="91" width="2.3" height="9" rx=".8" fill="#C5CBD5"/><rect x="269.5" y="96" width="2.3" height="4" rx=".8" fill="#C5CBD5"/><rect x="273.05" y="94" width="2.3" height="6" rx=".8" fill="#C5CBD5"/><rect x="276.6" y="97" width="2.3" height="3" rx=".8" fill="#C5CBD5"/><rect x="280.15" y="38" width="2.3" height="62" rx=".8" fill="#1A7A77"/><rect x="283.7" y="95" width="2.3" height="5" rx=".8" fill="#C5CBD5"/><rect x="287.25" y="96" width="2.3" height="4" rx=".8" fill="#C5CBD5"/><rect x="290.8" y="92" width="2.3" height="8" rx=".8" fill="#C5CBD5"/><rect x="294.35" y="97" width="2.3" height="3" rx=".8" fill="#C5CBD5"/><rect x="297.9" y="94" width="2.3" height="6" rx=".8" fill="#C5CBD5"/><rect x="301.45" y="96" width="2.3" height="4" rx=".8" fill="#C5CBD5"/><rect x="305.0" y="95" width="2.3" height="5" rx=".8" fill="#C5CBD5"/><rect x="308.55" y="97" width="2.3" height="3" rx=".8" fill="#C5CBD5"/><path d="M232 100.5H314" fill="none" stroke="#D5DAE1" stroke-width="1"/><text x="281.3" y="33" text-anchor="middle" font-weight="700" fill="#1A7A77">Hindi</text><text x="273" y="115" text-anchor="middle" font-size="9.5" fill="#5B6472">22 languages</text></svg></figure>
+        <div>
+          <h3><a href="https://github.com/Arka-Dutta-28/bhasha-detector">Bhasha Detector</a></h3>
+          <p class="by">Course project, IIT Gandhinagar</p>
+          <p class="desc">Identifies 22 Indic languages in native script and in romanised text, with a Transformer encoder trained from scratch.</p>
+          <p class="more"><a href="https://github.com/Arka-Dutta-28/bhasha-detector">Code</a></p>
+        </div>
+      </article>
+    </section>
+
+    <footer>Updated October 2026. More on <a href="https://github.com/Arka-Dutta-28">GitHub</a>.</footer>
+
+  </main>
+</div>
+</body>
+</html>
